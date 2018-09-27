@@ -26,11 +26,11 @@ dependencies {
 jar {
     manifest {
         // 指定Main函数所在类
-//        attributes "Main-Class":"io.example.Main"
-        // 改为官方推荐的 Launcher
-        attributes "Main-Class" : "io.vertx.core.Launcher",
-        // 新增Main Verticle属性，对应MainVerticle类
-        "Main-Verticle": "io.example.MainVerticle"
+        // attributes "Main-Class":"io.example.Main"
+        // 改为官方推荐的 Launcher 不需要依赖 Main
+        attributes "Main-Class": "io.vertx.core.Launcher",
+                // 新增Main Verticle属性，对应MainVerticle类
+                "Main-Verticle": "io.example.MainVerticle"
     }
 
     from {
